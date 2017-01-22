@@ -1,0 +1,23 @@
+$black: #252525;
+$purple: #20173A;
+$purpleHighlight: #7A67A5;
+$purpleVeryLight: #c5bdda;
+$purpleLowImpactFont:#d1c4f2;
+$red: #c14646;
+$orange: #ED7003;
+
+@mixin vertical-align($position: relative) {
+  position: $position;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@mixin clearfix {
+  &::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+}

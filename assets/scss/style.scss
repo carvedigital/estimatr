@@ -1,0 +1,255 @@
+@import "bourbon/bourbon";
+@import "grid-settings";
+@import "neat/neat";
+@import "settings";
+@import "lib/vex/vex";
+@import "lib/vex/vex-theme-bottom-right-corner";
+@import "lib/vex/vex-theme-default";
+@import "lib/vex/vex-theme-flat-attack";
+@import "lib/vex/vex-theme-os";
+@import "lib/vex/vex-theme-plain";
+@import "lib/vex/vex-theme-top";
+@import "lib/vex/vex-theme-wireframe";
+@import "fonts";
+@import "forms";
+
+html, body {
+  font-family: "gotham", "helvetica neue", "helvetica", "arial";
+  color: #FFF;
+  padding: 0;
+  margin: 0;
+  @include radial-gradient("at top", #9578C3, #0d0031, $fallback: $purple);
+  background: url('../img/background-noise.png'), radial-gradient(at top, #9578C3, #0d0031) fixed;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  min-height: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: $red;
+}
+
+body > header {
+  @include outer-container;
+  padding-top: 1.5em;
+  padding-left: 1em;
+  padding-right: 1em;
+  > a {
+    text-align: left;
+    img {
+      width: 150px;
+      margin: 0;
+    }
+    @include span-columns(4);
+    @include media($tablet) {
+      @include span-columns(12);
+      margin-bottom: 1.2em;
+      img {
+        margin: 0 auto;
+        display: block;
+      }
+    }
+  }
+
+  nav {
+    text-align: right;
+    width:auto; float:right;
+    @include media($tablet) {
+      @include span-columns(12);
+      text-align: center;
+    }
+    @include clearfix();
+    a {
+      color: $purpleLowImpactFont;
+      border-radius: 0.25em;
+      padding: 0.7em 1.2em 0.8em;
+      text-align: center;
+      width: auto;
+      font-size: 0.7em;
+      margin-top: 0.35em;
+      margin-left: 1.5em;
+      display: inline-block;
+      text-transform: uppercase;
+      font-weight: 400;
+      i {
+        margin-right: 0.5em;
+      }
+      @include transition(all 0.2s ease-in-out);
+      &.cta {
+        background-color: $purple;
+        color: #FFF;
+        &:hover {
+          background-color: #000;
+        }
+      }
+      &.settings {
+        padding:0; margin-top:-0.1em;
+        img {
+          max-width: 35px;
+          border-radius: 0.3em;
+        }
+        span{ display:none; }
+        @include media($tablet) {
+          padding: 0.7em 1.2em 0.8em;
+          img { display:none; }
+          span { display:block; }
+        }
+        @include media($mobile) {
+          padding: 0.7em 1.2em 0.8em;
+          img { display:none; }
+          span { display:block; }
+        }
+      }
+      &.floater{
+        float:left;display:block;
+      }
+      &:hover {
+        color: #FFF;
+      }
+      @include media($tablet) {
+        margin-left: 0.75em; margin-right: 0.75em;
+        &, &.floater{ float:none; display:inline-block; }
+      }
+      @include media($mobile) {
+        margin-left: 0.75em; margin-right: 0.75em;
+        &, &.floater{ float:none; display:inline-block; }
+      }
+    }
+  }
+}
+
+footer {
+  @include clearfix();
+  > section {
+    padding: 1.5em 1em;
+    > div {
+      @include outer-container;
+    }
+  }
+  color: $purpleLowImpactFont;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-top: 6px solid $purple;
+  section.top {
+    background-color: #15131B;
+    div.logo {
+      @include span-columns(3);
+      img {
+        max-width: 110px;
+      }
+    }
+    div.social {
+      text-align: right;
+      @include span-columns(9);
+      a {
+        display: inline-block;
+        font-size: 0.8em;
+        color: $purpleVeryLight;
+        margin-left: 2em;
+        i {
+          margin-right: 0.3em;
+        }
+        @include transition(all 0.1s ease-in-out);
+        &:hover {
+          color: #FFF;
+        }
+      }
+
+    }
+  }
+  section.bottom {
+    @include clearfix();
+    background-color: $purple;
+    div.copyright {
+      font-size: 0.7em;
+      margin-top: 3px;
+      font-weight: 500;
+      text-transform: uppercase;
+      @include span-columns(9);
+    }
+    div.carve-logo {
+      @include span-columns(3);
+      text-align: right;
+      img {
+        max-width: 18px;
+        display: inline-block;
+      }
+    }
+  }
+
+}
+
+.standard-page {
+  @include outer-container;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-top: 3.5em;
+  text-align: left;
+  margin-bottom: 3em;
+  h1 {
+    text-align: left;
+    color: #FFF;
+    font-weight: 300;
+    font-size: 1.6em;
+    margin: 0 0 1em 0;
+    padding: 0;
+    small {
+      font-weight: 500;
+      margin-left: 2em;
+      font-size: 0.6em;
+    }
+  }
+  hr {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    margin: 1em 0 2em 0;
+    &.smaller{
+      margin-left:0; margin-right:0; width:66%;
+    }
+  }
+}
+
+.styled-input {
+  display: block;
+  padding: 0.7em;
+  font-size: 1.2em;
+  border-radius: 0.2em;
+  border: 2px solid #E0DBEA;
+  color:#452F6F;
+  width: 100%;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 1em;
+  outline: none;
+  @include transition(all 0.2s ease-in-out);
+  @include placeholder {
+    font-weight: 300;
+  }
+}
+
+.styled-input:focus {
+  border: 2px solid $purple;
+  background-color: #E0DBEA;
+  color: $purple;
+  outline: none;
+}
+
+@import "home";
+@import "estimates/creation";
+@import "estimates/listings";
+@import "estimates/editor";

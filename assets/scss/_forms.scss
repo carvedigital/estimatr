@@ -1,0 +1,86 @@
+.account-form-item {
+  clear:both; margin-bottom:2em; @include clearfix();
+  dl {
+    @include span-columns(4 of 12);
+    margin-top: 0;
+    margin-bottom: 0;
+    dt {
+      font-weight: 300;
+      font-size: 1.3em;
+      margin-bottom: 0.9em;
+    }
+    dd {
+      font-weight: 300;
+      padding: 0;
+      margin: 0;
+      font-size: 0.9em;
+      color: #B3A7CA;
+    }
+    dt, dd {
+      text-align: left;
+    }
+  }
+  input {
+    @include span-columns(4 of 12);
+    color:$purple; font-size:0.9em; padding:0.6em; text-align:left; margin-top:3em;
+  }
+  .tablet-selector{
+    @include span-columns(4 of 12);
+    text-align:center; margin-top:3em;
+    a{
+      @include transition(all 0.1s ease-in-out);
+      color:rgba(255,255,255,0.2); font-size:1.8em; text-transform: uppercase;
+      &.active, &:hover{ color:rgba(255,255,255,1); }
+    }
+    &.small a{ font-size:1em; }
+    a:first-of-type{ margin-right:3em; }
+    a:last-of-type{ margin-left:3em; }
+    a.active{ color:#FFF; }
+    @include media($tablet) {
+      @include span-columns(12 of 12);
+      text-align:center; margin-bottom:2em;
+    }
+  }
+  @include media($tablet) {
+    dl{
+      @include span-columns(12 of 12);
+      dt{ text-align:center; }
+      dd{ text-align:center; }
+    }
+    input{
+      @include span-columns(12 of 12);
+      margin-top:1em; text-align:center;
+    }
+  }
+
+}
+
+.account-form-submit
+{
+  @include span-columns(8 of 12);
+  a{
+    background-color: #FFF;
+    float: right;
+    margin-top: 1.5em;
+    padding: 0.5em 1em;
+    border-radius: 0.2em;
+    font-size: 0.8em;
+    color: $purple;
+    text-transform: uppercase;
+    @include transition(all 0.2s ease-in-out);
+    &:hover{
+      background-color:#DDD;
+    }
+    &.inactive{
+      background-color:#8B7FA5; color:#5C5277;
+      &:hover{
+        background-color:#8B7FA5; color:#5C5277;
+      }
+    }
+  }
+  @include media($tablet) {
+    @include span-columns(12 of 12);
+    text-align:center;
+    a{ display:block; float:none; }
+  }
+}

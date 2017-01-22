@@ -1,0 +1,16 @@
+{
+  "name": "EstimatrApp",
+  "version": "0.0.1",
+  "devDependencies": {
+    "grunt": "latest",
+    "grunt-contrib-compass": "^1.0.3",
+    "grunt-contrib-concat": "latest",
+    "grunt-contrib-sass": "latest",
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-watch": "latest",
+    "grunt-modernizr": "latest"
+  },
+  "dependencies": {
+    "motion-ui": "^1.1.1"
+  }
+}

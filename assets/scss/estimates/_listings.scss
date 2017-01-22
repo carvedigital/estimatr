@@ -1,0 +1,73 @@
+.estimate-listings {
+  .estimate-list {
+    .estimate-entry {
+      background-color: rgba(255, 255, 255, 0.25);
+      @include span-columns(3);
+      width:22.64441%;
+      @include media($tablet) {
+        @include span-columns(4);
+        width:30.97901%;
+      }
+      @include media($mobile) {
+        @include span-columns(12);
+      }
+      @include transition(all 0.1s ease-in-out);
+      height: 14em;
+      margin-bottom:2.35765%;
+      overflow: hidden;
+      position: relative;
+      div.estimate-entry-details {
+        @include vertical-align();
+        display: block;
+        text-align: center;
+        h2 {
+          padding: 0;
+          margin: 0 0 0.5em;
+          color: #FFF;
+          font-size: 1em;
+          font-weight: 500;
+          display: block;
+        }
+        h3 {
+          padding: 0;
+          margin: 0 0 1.8em 0;
+          color: #FFF;
+          font-size: 0.8em;
+          font-weight: 300;
+          display: block;
+          line-height:1.5em;
+        }
+        > a.create-symbol {
+          margin-bottom: 0.5em;
+          display:block;
+          color: $purple;
+          opacity: 0.5;
+          font-size: 4em;
+          @include transition(all 0.1s ease-in-out);
+          &:hover {
+            color: #FFF;
+            opacity: 1;
+          }
+        }
+        > a.cta-open-estimate {
+          @include clearfix();
+          margin-left: 15%;
+          margin-right: 15%;
+          text-align: center;
+          display: block;
+          background-color: rgba(255, 255, 255, 100);
+          color: $purple;
+          border-radius: 0.2em;
+          padding: 0.5em;
+          font-weight: 500;
+          font-size: 0.8em;
+          @include transition(all 0.1s ease-in-out);
+          &:hover {
+            background-color: rgba(255, 255, 255, 0.7);
+          }
+        }
+      }
+
+    }
+  }
+}

@@ -1,0 +1,49 @@
+section.create-estimate-dialog {
+  @include span-columns(4);
+  @include shift(4);
+  @include media($desktop)
+  {
+    @include span-columns(6);
+    @include shift(3);
+  }
+  @include media($tablet)
+  {
+    @include span-columns(8);
+    @include shift(2);
+  }
+  @include media($mobile)
+  {
+    @include span-columns(12);
+    @include shift(0);
+  }
+
+  background-color: #FFF;
+  padding: 2.5em 3em;
+  margin-top: 5em;
+  color: $purple;
+  border-radius: 0.2em;
+  box-shadow: 0px 5px 0px #1c1525;
+
+
+  h1 {
+    text-align: center;
+    color: $purple;
+    font-weight: 300;
+    font-size: 1.8em;
+    margin: 0 0 1em 0;
+    padding: 0;
+  }
+
+  input[type=submit]
+  {
+    background-color:$purple;
+    border:none;
+    padding: 0.8em;
+    color:#FFF;
+    font-weight:500;
+    display:block;
+    width:100%;
+    border-radius: 0.2em;
+    font-size: 1.0em;
+  }
+}

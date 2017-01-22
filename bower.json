@@ -1,0 +1,23 @@
+{
+  "name": "estimatr",
+  "description": "",
+  "main": "",
+  "authors": [
+    "David Thorpe <david@carve.io>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/carvedigital/estimatr",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "www/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "motion-ui": "~1.1.1"
+  }
+}

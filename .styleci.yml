@@ -1,0 +1,10 @@
+preset: laravel
+
+risky: false
+
+enabled:
+  - align_double_arrow
+
+finder:
+  not-name:
+      - "*ide_helper.php"

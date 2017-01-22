@@ -1,0 +1,190 @@
+.estimate-editor header {
+  @include clearfix();
+}
+
+.estimate-editor h1 {
+  @include span-columns(8);
+  margin: 0;
+  a {
+    color: #FFF;
+    @include transition(all 0.2s ease-in-out);
+    &:hover {
+      color: #AAA;
+    }
+  }
+
+  .styled-input {
+    display: inline;
+    padding: 0.4em 0.5em;
+    font-size: 0.8em;
+    border-radius: 0.1em;
+    border: 1px solid #E0DBEA;
+    width: auto;
+    text-align: left;
+  }
+}
+
+.estimate-editor h2 {
+  @include span-columns(4);
+  text-align: right;
+  color: #FFF;
+  font-weight: 500;
+  font-size: 1.2em;
+  margin: 0;
+  padding: 0;
+  a {
+    color: #B3A2D2;
+    @include transition(all 0.2s ease-in-out);
+    &:hover {
+      color: #FFF;
+    }
+  }
+}
+
+@include media($tablet) {
+  .estimate-editor h1 {
+    @include span-columns(12);
+    display: block;
+    text-align: center;
+    margin-bottom: 1em;
+    small {
+      display: block;
+      margin-top: 0.8em;
+    }
+  }
+  .estimate-editor h2 {
+    @include span-columns(12);
+    text-align: center;
+    font-size: 0.9em;
+    font-weight: 300;
+  }
+}
+
+@include media($mobile) {
+  .estimate-editor h1 {
+    display: block;
+    @include span-columns(12);
+    text-align: center;
+    small {
+      display: block;
+      margin-top: 0.8em;
+    }
+  }
+}
+
+.section-creator {
+  background-color: rgba(255, 255, 255, 0.18);
+  padding: 1em;
+  border-radius: 0.2em;
+  display: block;
+  font-size: 0.9em;
+  margin-top: 1em;
+  a {
+    color: rgba(255, 255, 255, 0.2);
+    margin-right: 2em;
+    @include transition(all 0.2s ease-in-out);
+    &:last-of-type {
+      margin-right: 0;
+    }
+    &:hover {
+      color: rgba(255, 255, 255, 1);
+    }
+  }
+}
+
+.item-listing {
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 0.5em 1em;
+  display: block;
+  font-size: 0.9em;
+  color: #FFF;
+  @include clearfix;
+  line-height: 2.1em;
+  margin-bottom: 0.2em;
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+  &.item-listing-header {
+    background-color: rgba(255, 255, 255, 0.2);
+    font-weight: 500;
+    padding: 0.5em 1em;
+    border-radius: 0.2em 0.2em 0 0;
+    color: rgba(255, 255, 255, 0.6);
+    > * {
+      font-size: 0.8em;
+    }
+  }
+  a {
+    border-bottom: 0.1em solid #523F8C;
+    color: #FFF;
+    padding-bottom: 0.31em;
+    @include transition(all 0.2s ease-in-out);
+    &:hover {
+      border-bottom: 0.1em solid #FFF;
+    }
+  }
+  .item-listing-actions {
+    a {
+      font-size: 1.6em;
+      padding-bottom: 0;
+      border: none;
+      margin-right: 0.2em;
+      margin-left: 1em;
+      margin-top: 0.12em;
+      display: inline-block;
+      &:hover {
+        color: $purple;
+      }
+    }
+  }
+  .item-listing-name {
+    @include span-columns(3);
+  }
+  .item-listing-estimate-number {
+    @include span-columns(2);
+  }
+  .item-listing-total, .item-listing-actions {
+    @include span-columns(3);
+  }
+  input {
+    padding: 0.5em;
+    border: 1px solid transparent;
+    margin-bottom: 2.5em;
+    margin-top: 0.5em;
+    font-size: 0.9em;
+    font-weight: 500;
+    color: $purple;
+    width: 100%;
+  }
+  input[type=text]:focus {
+    border: 1px solid $purple;
+    background-color: #E0DBEA;
+    color: $purple;
+    outline: none;
+  }
+}
+
+.section-item-listings {
+  padding-left: 2em;
+}
+
+.save-estimate-button {
+  background-color: #FFF;
+  float: right;
+  margin-top: 1.5em;
+  padding: 0.5em 1em;
+  border-radius: 0.2em;
+  font-size: 0.8em;
+  color: $purple;
+  text-transform: uppercase;
+  @include transition(all 0.2s ease-in-out);
+  &:hover{
+    background-color:#DDD;
+  }
+  &.inactive{
+    background-color:#8B7FA5; color:#5C5277;
+    &:hover{
+      background-color:#8B7FA5; color:#5C5277;
+    }
+  }
+}
