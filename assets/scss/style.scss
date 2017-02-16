@@ -18,8 +18,7 @@ html, body {
   color: #FFF;
   padding: 0;
   margin: 0;
-  @include radial-gradient("at top", #9578C3, #0d0031, $fallback: $purple);
-  background: url('../img/background-noise.png'), radial-gradient(at top, #9578C3, #0d0031) fixed;
+  background:#533856;
 }
 
 html {
