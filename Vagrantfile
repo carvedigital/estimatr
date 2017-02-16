@@ -13,7 +13,7 @@ github_pat          = "13c6470da2bcc7914df58e4aad86f3ad70122c42"
 
 # Server Configuration
 
-hostname        = "estimatr.dev"
+hostname        = "vagrant.dev"
 
 # Set a local private network IP address.
 # See http://en.wikipedia.org/wiki/Private_network for explanation
