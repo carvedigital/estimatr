@@ -44,7 +44,7 @@ return [
     |
     */
 
-    'encrypt' => true,
+    'encrypt' => env('SESSION_ENCRYPT',true),
 
     /*
     |--------------------------------------------------------------------------
@@ -109,7 +109,7 @@ return [
     |
     */
 
-    'cookie' => 'estimatrapp_ses',
+    'cookie' => env('SESSION_COOKIE','estimatrapp_ses'),
 
     /*
     |--------------------------------------------------------------------------
