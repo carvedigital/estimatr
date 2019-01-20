@@ -109,7 +109,7 @@ return [
     |
     */
 
-    'cookie' => env('SESSION_COOKIE','estimatrapp_ses'),
+    'cookie' => env('SESSION_COOKIE','estimatrapp_session'),
 
     /*
     |--------------------------------------------------------------------------
@@ -148,6 +148,6 @@ return [
     |
     */
 
-    'secure' => false,
+    'secure' => true,
 
 ];
