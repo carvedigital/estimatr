@@ -1,4 +1,4 @@
-## EstimatrApp
+## ⏳ estimatrapp
 
 Estimatr lets you create fast, accurate software development estimates!
 
